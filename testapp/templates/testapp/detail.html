@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1> This is tutorial "{{ tutorial.tutorial_name }}" ({{tutorial.tutorial_group}})</h1>
+<h3> It depens on 
+{% if tutorial.depend_on %}
+	{{tutorial.depend_on.tutorial_name}}
+{% else %}
+	nothing
+{% endif %}
+
+
+{% endblock %}

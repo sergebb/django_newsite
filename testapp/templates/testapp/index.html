@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if group_list %}
+    <ul>
+    {% for g in group_list %}
+        <li><h4>{{ g.group_name }}</h4>
+        	<ul>
+        	{% for t in g.tutorial_set.all|dictsort:"tutorial_order" %}
+        		<li><a href="{% url 'testapp:detail' t.id %}">{{t.tutorial_name}}</a></li>
+    		{% endfor %}
+    		</ul>
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No tutorials yet.</p>
+{% endif %}
+
+{% endblock %}
