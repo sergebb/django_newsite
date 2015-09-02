@@ -81,7 +81,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'newdb',
         'USER': 'django',
-        'PASSWORD': 'heze7aac',
+        'PASSWORD': '---',
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
@@ -112,6 +112,6 @@ EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'serge.django.test@gmail.com'
-EMAIL_HOST_PASSWORD = 'heze7aac'
+EMAIL_HOST_PASSWORD = '---'
 DEFAULT_FROM_EMAIL = 'serge.django.test@gmail.com'
 DEFAULT_TO_EMAIL = 'to email'
