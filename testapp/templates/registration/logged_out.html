@@ -2,6 +2,8 @@
 
 {% block content %}
 
-Logged out!
+<div class="alert alert-danger" role="alert">
+	Logged out!
+<a href="{% url 'testapp:index' %}"><button type="button" class="btn btn btn-info">Go home</button>
 
 {% endblock %}

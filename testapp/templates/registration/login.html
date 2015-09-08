@@ -1,5 +1,9 @@
+{% extends "base.html" %}
+{% block header %}{% endblock %}
+
 {% block content %}
 
+<div class="well">
 <h1>Login</h1>
 
 <form id="login_form" method="post" action="{% url 'testapp:login'%}">
@@ -11,5 +15,6 @@
 
     <input type="submit" value="submit" />
 </form>
+</div>
 
 {% endblock %}

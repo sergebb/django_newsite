@@ -1,7 +1,10 @@
-
+{% extends "base.html" %}
+{% block header %}{% endblock %}
 {% block content %}
 
-<h3> Your activation link expired</h3>
-<p> <a href="{% url 'testapp:index' %}">Go home.</p>
+<div class="alert alert-danger" role="alert">
+    <strong>Ooops!</strong> Your activation link expired
+</div>
+<a href="{% url 'testapp:index' %}"><button type="button" class="btn btn btn-info">Go home</button>
 
 {% endblock %}

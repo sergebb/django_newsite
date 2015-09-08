@@ -1,9 +1,10 @@
 {% extends "base.html" %}
-
+{% block header %}{% endblock %}
 {% block content %}
 
-<h3> Your account were activated</h3>
-<p> <a href="{% url 'testapp:index' %}">Go home.</p>
-
+<div class="alert alert-success" role="alert">
+    <strong>Well done!</strong> Your account were activated
+</div>
+<a href="{% url 'testapp:index' %}"><button type="button" class="btn btn btn-info">Go home</button>
 
 {% endblock %}

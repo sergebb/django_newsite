@@ -3,17 +3,18 @@
 {% block content %}
 
 {% if group_list %}
-    <ul>
     {% for g in group_list %}
-        <li><h4>{{ g.group_name }}</h4>
-        	<ul>
-        	{% for t in g.tutorial_set.all|dictsort:"tutorial_order" %}
-        		<li><a href="{% url 'testapp:detail' t.id %}">{{t.tutorial_name}}</a></li>
-    		{% endfor %}
-    		</ul>
-        </li>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">{{ g.group_name }}</h3>
+        </div>
+        <div class="panel-body">
+            {% for t in g.tutorial_set.all|dictsort:"tutorial_order" %}
+                <li><a href="{% url 'testapp:detail' t.id %}">{{t.tutorial_name}}</a></li>
+            {% endfor %}
+        </div>
+    </div>
     {% endfor %}
-    </ul>
 {% else %}
     <p>No tutorials yet.</p>
 {% endif %}
